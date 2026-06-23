@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#0b1026">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0b1026"/>
+    <circle cx="600" cy="250" r="46" fill="none" stroke="#E6A24E" stroke-width="10"/>
+    <path d="M600 296 C540 380 470 430 410 470 M600 296 C660 380 730 430 790 470" fill="none" stroke="#E6A24E" stroke-width="9"/>
+    <circle cx="600" cy="560" r="26" fill="none" stroke="#E6A24E" stroke-width="10"/>
+    <circle cx="410" cy="470" r="20" fill="none" stroke="#E6A24E" stroke-width="9"/>
+    <circle cx="790" cy="470" r="20" fill="none" stroke="#E6A24E" stroke-width="9"/>
+    <text x="600" y="700" font-family="sans-serif" font-size="64" font-weight="800" fill="#F8F4EC" text-anchor="middle">N3N<tspan fill="#E6A24E">_ai</tspan></text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:#05060f;height:100%;}
+  *{box-sizing:border-box;}
+  @keyframes n3Twinkle{0%,100%{opacity:.15;}50%{opacity:1;}}
+  @keyframes n3Float{0%,100%{transform:translateY(0);}50%{transform:translateY(-16px);}}
+  @keyframes n3Orbit{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+  @keyframes n3Ring{0%{transform:translate(-50%,-50%) scale(.35);opacity:.55;}80%{opacity:0;}100%{transform:translate(-50%,-50%) scale(1.7);opacity:0;}}
+  @keyframes n3Glow{0%,100%{opacity:.55;}50%{opacity:.9;}}
+  @keyframes n3Intro{0%{opacity:0;transform:translateY(22px) scale(.95);}4%{opacity:1;transform:translateY(0) scale(1);}11%{opacity:1;transform:translateY(0) scale(1);}16%{opacity:0;transform:translateY(-18px) scale(1.05);}100%{opacity:0;transform:translateY(22px) scale(.95);}}
+  @keyframes n3Brand{0%{opacity:0;transform:translateY(-6px);}14%{opacity:0;transform:translateY(-6px);}19%{opacity:1;transform:translateY(0);}94%{opacity:1;transform:translateY(0);}99%{opacity:0;}100%{opacity:0;}}
+  @keyframes n3Hero{0%{opacity:0;transform:translateX(48px) scale(.84);}14%{opacity:0;transform:translateX(48px) scale(.84);}24%{opacity:1;transform:translateX(0) scale(1);}93%{opacity:1;transform:translateX(0) scale(1);}99%{opacity:0;transform:translateX(40px) scale(.9);}100%{opacity:0;}}
+  @keyframes n3T1{0%{opacity:0;transform:translateY(26px);}22%{opacity:0;transform:translateY(26px);}28%{opacity:1;transform:translateY(0);}40%{opacity:1;transform:translateY(0);}45%{opacity:0;transform:translateY(-22px);}100%{opacity:0;transform:translateY(26px);}}
+  @keyframes n3T2{0%{opacity:0;transform:translateY(26px);}46%{opacity:0;transform:translateY(26px);}52%{opacity:1;transform:translateY(0);}64%{opacity:1;transform:translateY(0);}69%{opacity:0;transform:translateY(-22px);}100%{opacity:0;transform:translateY(26px);}}
+  @keyframes n3T3{0%{opacity:0;transform:translateY(26px);}70%{opacity:0;transform:translateY(26px);}76%{opacity:1;transform:translateY(0);}91%{opacity:1;transform:translateY(0);}96%{opacity:0;transform:translateY(-18px);}100%{opacity:0;transform:translateY(26px);}}
+  @keyframes n3CardPop{0%,46%{opacity:0;transform:translateY(20px);}54%{opacity:1;transform:translateY(0);}64%{opacity:1;transform:translateY(0);}69%{opacity:0;}100%{opacity:0;transform:translateY(20px);}}
+</style>
+</helmet>
+
+<div style="position:fixed;inset:0;background:#05060f;display:flex;align-items:center;justify-content:center;">
+<div style="--accent:{{ accent }};--loop:{{ loop }};position:relative;width:min(100vw,177.78vh);height:min(56.25vw,100vh);overflow:hidden;font-family:'Manrope',sans-serif;background:
+  radial-gradient(120% 90% at 78% 18%, rgba(70,90,160,.30) 0%, rgba(70,90,160,0) 55%),
+  radial-gradient(130% 110% at 50% 128%, rgba(230,162,78,.42) 0%, rgba(192,99,58,.18) 32%, rgba(192,99,58,0) 60%),
+  linear-gradient(180deg,#070a1c 0%,#0b1026 46%,#1a1322 80%,#241622 100%);">
+
+  <!-- starfield -->
+  <div style="position:absolute;inset:0;">
+    <sc-for list="{{ stars }}" as="s" hint-placeholder-count="34">
+      <div style="{{ s.css }}"></div>
+    </sc-for>
+  </div>
+
+  <!-- ambient warm glow on horizon -->
+  <div style="position:absolute;left:50%;bottom:-22%;width:90%;height:55%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgba(230,162,78,.34), rgba(230,162,78,0) 70%);filter:blur(20px);animation:n3Glow 6s ease-in-out infinite;"></div>
+
+  <!-- top-left brand mark -->
+  <div style="position:absolute;top:5.4%;left:5%;z-index:6;animation:n3Brand var(--loop,16s) linear infinite;">
+    <div style="display:flex;align-items:center;gap:11px;">
+      <img src="assets/logo-n3n.png" alt="N3N_ai" style="width:clamp(30px,3vw,42px);height:auto;display:block;filter:drop-shadow(0 4px 12px rgba(230,162,78,.35));"/>
+      <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(15px,1.5vw,22px);letter-spacing:.5px;color:#F4EFE6;">N3N<span style="color:var(--accent,#E6A24E);">_ai</span></div>
+    </div>
+  </div>
+
+  <!-- HERO dish (right) -->
+  <div style="position:absolute;top:50%;right:3%;width:50%;height:78%;transform:translateY(-50%);z-index:4;animation:n3Hero var(--loop,16s) ease-in-out infinite;">
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+      <!-- orbital ring -->
+      <div style="position:absolute;width:74%;aspect-ratio:1;transform:rotateX(74deg);transform-style:preserve-3d;">
+        <div style="position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(230,162,78,.28);"></div>
+        <sc-if value="{{ showSatellite }}" hint-placeholder-val="{{ true }}">
+          <div style="position:absolute;inset:0;animation:n3Orbit 9s linear infinite;">
+            <div style="position:absolute;top:-7px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:3px;transform:rotateX(-74deg);background:linear-gradient(135deg,var(--accent,#E6A24E),#fff);box-shadow:0 0 14px rgba(230,162,78,.9);"></div>
+          </div>
+        </sc-if>
+      </div>
+      <!-- signal rings -->
+      <div style="position:absolute;top:42%;left:50%;width:42%;aspect-ratio:1;border-radius:50%;border:2px solid var(--accent,#E6A24E);animation:n3Ring 3.2s ease-out infinite;"></div>
+      <div style="position:absolute;top:42%;left:50%;width:42%;aspect-ratio:1;border-radius:50%;border:2px solid var(--accent,#E6A24E);animation:n3Ring 3.2s ease-out infinite;animation-delay:1.06s;"></div>
+      <div style="position:absolute;top:42%;left:50%;width:42%;aspect-ratio:1;border-radius:50%;border:2px solid var(--accent,#E6A24E);animation:n3Ring 3.2s ease-out infinite;animation-delay:2.13s;"></div>
+      <!-- dish image -->
+      <img src="assets/dish-flat.png" alt="Antenne Starlink" style="position:relative;width:112%;max-height:none;object-fit:contain;filter:drop-shadow(0 30px 46px rgba(0,0,0,.5));animation:n3Float 7s ease-in-out infinite;z-index:2;"/>
+    </div>
+  </div>
+
+  <!-- LEFT text scenes (stacked, cross-fade) -->
+  <div style="position:absolute;top:0;left:0;width:52%;height:100%;z-index:5;">
+
+    <!-- scene 1 -->
+    <div style="position:absolute;top:50%;left:6%;width:84%;transform:translateY(-50%);animation:n3T1 var(--loop,16s) ease-in-out infinite;">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid rgba(230,162,78,.4);border-radius:100px;color:var(--accent,#E6A24E);font-size:clamp(11px,1vw,14px);font-weight:600;letter-spacing:2.5px;text-transform:uppercase;">Internet par satellite</div>
+      <h1 style="font-family:'Sora',sans-serif;font-weight:800;color:#F8F4EC;font-size:clamp(28px,4.4vw,64px);line-height:1.04;margin:20px 0 16px;letter-spacing:-1px;text-wrap:balance;">Le haut débit, partout<br>au <span style="color:var(--accent,#E6A24E);">Niger</span> avec <span style="color:var(--accent,#E6A24E);">N3N_ai</span>.</h1>
+      <p style="color:#AEB4CC;font-size:clamp(14px,1.5vw,21px);line-height:1.55;margin:0;max-width:30ch;">Une connexion rapide et fiable, jusque dans les zones les plus reculées.</p>
+    </div>
+
+    <!-- scene 2 : stats -->
+    <div style="position:absolute;top:50%;left:6%;width:88%;transform:translateY(-50%);animation:n3T2 var(--loop,16s) ease-in-out infinite;">
+      <h2 style="font-family:'Sora',sans-serif;font-weight:700;color:#F8F4EC;font-size:clamp(22px,3.2vw,46px);line-height:1.08;margin:0 0 26px;letter-spacing:-.5px;">Des performances<br>qui changent tout.</h2>
+      <div style="display:flex;gap:16px;">
+        <sc-for list="{{ stats }}" as="st" hint-placeholder-count="3">
+          <div style="flex:1;padding:20px 18px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(6px);animation:n3CardPop var(--loop,16s) ease-in-out infinite;">
+            <div style="font-family:'Sora',sans-serif;font-weight:800;color:var(--accent,#E6A24E);font-size:clamp(22px,2.8vw,38px);line-height:1;">{{ st.value }}</div>
+            <div style="color:#C8CCDD;font-size:clamp(12px,1.1vw,15px);font-weight:600;margin-top:8px;">{{ st.label }}</div>
+            <div style="color:#878DA6;font-size:clamp(10px,.95vw,13px);margin-top:3px;">{{ st.sub }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <!-- scene 3 : CTA -->
+    <div style="position:absolute;top:50%;left:6%;width:84%;transform:translateY(-50%);animation:n3T3 var(--loop,16s) ease-in-out infinite;">
+      <div style="font-family:'Sora',sans-serif;font-weight:500;color:var(--accent,#E6A24E);font-size:clamp(13px,1.2vw,17px);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;">Disponible dès maintenant</div>
+      <h2 style="font-family:'Sora',sans-serif;font-weight:800;color:#F8F4EC;font-size:clamp(26px,3.8vw,56px);line-height:1.05;margin:0 0 24px;letter-spacing:-.8px;">Connectez-vous<br>au futur.</h2>
+      <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+        <div style="display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:100px;background:linear-gradient(135deg,var(--accent,#E6A24E),#C0633A);color:#1a1009;font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(14px,1.4vw,19px);box-shadow:0 14px 34px rgba(230,162,78,.34);">Demander un devis →</div>
+        <div style="color:#C8CCDD;font-size:clamp(14px,1.3vw,19px);font-weight:600;">N3N_ai</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO overlay -->
+  <div style="position:absolute;inset:0;z-index:8;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(120% 90% at 50% 40%, rgba(11,16,38,.35), rgba(7,10,28,.9) 75%);animation:n3Intro var(--loop,16s) ease-in-out infinite;">
+    <div style="display:flex;align-items:center;gap:20px;margin-bottom:18px;">
+      <img src="assets/logo-n3n.png" alt="N3N_ai" style="width:clamp(64px,7vw,104px);height:auto;display:block;filter:drop-shadow(0 14px 34px rgba(230,162,78,.4));"/>
+      <div style="font-family:'Sora',sans-serif;font-weight:800;color:#F8F4EC;font-size:clamp(40px,6.6vw,96px);letter-spacing:-2px;">N3N<span style="color:var(--accent,#E6A24E);">_ai</span></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;color:#AEB4CC;font-size:clamp(14px,1.5vw,22px);letter-spacing:4px;text-transform:uppercase;font-weight:600;">
+      <span style="width:36px;height:1px;background:rgba(174,180,204,.5);"></span>
+      Internet par satellite
+      <span style="width:36px;height:1px;background:rgba(174,180,204,.5);"></span>
+    </div>
+  </div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:720},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#E6A24E&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;speed&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Lent&quot;,&quot;Normal&quot;,&quot;Rapide&quot;],&quot;default&quot;:&quot;Normal&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showSatellite&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const speedMap = { 'Lent': '22s', 'Normal': '16s', 'Rapide': '11s' };
+    const loop = speedMap[this.props.speed] || '16s';
+    const accent = this.props.accent || '#E6A24E';
+    const showSatellite = this.props.showSatellite ?? true;
+
+    // deterministic-ish starfield
+    const stars = [];
+    let seed = 7;
+    const rnd = () => { seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; };
+    for (let i = 0; i < 38; i++) {
+      const top = (rnd() * 78).toFixed(2);
+      const left = (rnd() * 100).toFixed(2);
+      const size = (rnd() * 2 + 1).toFixed(2);
+      const dur = (rnd() * 3 + 2.5).toFixed(2);
+      const delay = (rnd() * 4).toFixed(2);
+      const op = (rnd() * 0.5 + 0.4).toFixed(2);
+      stars.push({ css:
+        `position:absolute;top:${top}%;left:${left}%;width:${size}px;height:${size}px;border-radius:50%;`+
+        `background:#fff;opacity:${op};box-shadow:0 0 6px rgba(255,255,255,.7);`+
+        `animation:n3Twinkle ${dur}s ease-in-out ${delay}s infinite;`
+      });
+    }
+
+    const stats = [
+      { value: '100+ Mb/s', label: 'Débit rapide', sub: 'streaming & visio fluides' },
+      { value: '≈ 25 ms', label: 'Faible latence', sub: 'idéal pour le travail' },
+      { value: 'Partout', label: 'Couverture totale', sub: 'villes & zones rurales' },
+    ];
+
+    return { stars, stats, loop, accent, showSatellite };
+  }
+}
+</script>
+</body>
+</html>
